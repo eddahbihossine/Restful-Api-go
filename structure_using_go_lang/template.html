@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+
+        }
+        nav a {
+            float: left;
+            color: #fbfbfb;
+            display: flex;
+            justify-content: center;
+            padding: 14px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            max-width: max-window-size;
+            max-height: max-content-size;
+            height: 100rem;
+            padding: 20px;
+            background-color: #000000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+        }
+        h1 {
+            color: #ffffff;
+            text-align: center;
+        }
+        button
+        {
+            background-color: #4CAF50;
+            display: flex;
+            justify-items: center;
+        }
+        button p {
+            color: #666666;
+            line-height: 1.6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+    <div class="container">
+        <div class="tst">
+            <h1>{{.Title}}</h1>
+            <button>
+                <p>{{.Message}}</p>
+            </button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        // GSAP animation for the header
+        gsap.to("h1", { duration: 1, fontSize: "3rem", color: "#ffff", ease: "in" });
+    </script>
+</body>
+</html>
